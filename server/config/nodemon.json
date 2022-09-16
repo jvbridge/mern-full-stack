@@ -1,0 +1,5 @@
+{
+  "watch": ["./*"],
+  "ignore": ["build"],
+  "exec": "node server.js"
+}
