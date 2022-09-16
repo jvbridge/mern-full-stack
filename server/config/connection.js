@@ -1,8 +1,12 @@
-import { connect, connection } from 'mongoose';
-import { dbName } from './consts';
+import mongoose from 'mongoose';
+import { dbName } from './consts.js';
 
-process.env.MONGODB_URI
-  ? connect(process.env.MONGODB_URI, { dbName })
-  : connect('mongodb://127.0.0.1:27017/' + dbName);
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/' + dbName,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
-export default connection;
+export default mongoose.connection;

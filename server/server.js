@@ -3,7 +3,7 @@ import * as path from 'path';
 import { ApolloServer } from 'apollo-server-express';
 import typeDefs from './schema/typeDefs.js';
 import resolvers from './schema/resolvers.js';
-import { authMiddleware } from './util/index.js';
+import { authMiddleware } from './util/auth.js';
 import { PORT } from './config/consts.js';
 import db from './config/connection.js';
 
