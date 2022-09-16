@@ -1,0 +1,7 @@
+node_modules/
+build/
+ignore/
+
+.DS_Store
+.vs_code
+.env
