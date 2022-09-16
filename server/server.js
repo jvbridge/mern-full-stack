@@ -1,8 +1,8 @@
 import express from 'express';
 import * as path from 'path';
 import { ApolloServer } from 'apollo-server-express';
-import typeDefs from './schema/typeDefs';
-import resolvers from './schema/resolvers';
+import typeDefs from './schema/index.js';
+import resolvers from './schema/index.js';
 import { authMiddleware } from './util/auth';
 import { PORT } from './config/consts';
 import db from './config/connection';
