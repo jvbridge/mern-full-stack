@@ -11,6 +11,7 @@
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.10.0",
