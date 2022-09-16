@@ -1,11 +1,11 @@
 import express from 'express';
 import * as path from 'path';
 import { ApolloServer } from 'apollo-server-express';
-import typeDefs from './schema/index.js';
-import resolvers from './schema/index.js';
-import { authMiddleware } from './util/auth';
-import { PORT } from './config/consts';
-import db from './config/connection';
+import typeDefs from './schema/typeDefs.js';
+import resolvers from './schema/resolvers.js';
+import { authMiddleware } from './util/index.js';
+import { PORT } from './config/consts.js';
+import db from './config/connection.js';
 
 // create the express server
 const app = express();
