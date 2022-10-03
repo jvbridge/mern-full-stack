@@ -8,6 +8,7 @@ const expiration = process.env.EXPERATION || '2h';
 export const userDataJwtPayload = (jwtToken) => {
   // try to decode the data
   try {
+    console.log('jwt: \n', jwt);
     const { data } = jwt.verify(jwtToken, secret, { maxAge: expiration });
     return data;
   } catch (error) {
@@ -51,6 +52,7 @@ export function authMiddleware({ req }) {
  * @returns the web token
  */
 export function signToken({ email, _id }) {
+  console.log('jwt: \n', jwt);
   const payload = { email, _id };
   return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
 }
